@@ -1,0 +1,126 @@
+﻿@model ClienteModel
+@addTagHelper *, Microsoft.AspNetCore.Mvc.TagHelpers
+
+@{
+    ViewData["Title"] = "Adicionar Cliente";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+<body>    
+
+    <div class="center">
+        <h1 class="mb-4">Adicionar Cliente</h1>
+    </div>
+
+    <div class="container">
+
+        <form asp-controller="Cliente" asp-action="Criar" method="post">
+
+            <div class="form-row">
+                <div class="form-group col-md-12">
+                    <label for="nome">Nome:</label>
+                    <input type="text" asp-for="Nome" class="form-control" id="nome" name="nome">
+                    <span asp-validation-for="Nome" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="cpf">CPF:</label>
+                    <input type="text" asp-for="CPF" class="form-control" id="cpf" maxlength="14" name="cpf">
+                    <span asp-validation-for="CPF" class="text-danger"></span>                        
+                </div>
+                <div class="form-group col-md-3">
+                    <label for="telefone">Telefone:</label>
+                    <input type="tel" asp-for="Telefone" class="form-control" id="telefone" name="telefone">
+                    <span asp-validation-for="Telefone" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="email">Email:</label>
+                    <input type="text" asp-for="Email" class="form-control" id="email" name="email">
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-9">
+                    <label for="endereco">Endereço:</label>
+                    <input type="text" asp-for="Endereco" class="form-control" id="endereco" name="endereco">
+                    <span asp-validation-for="Endereco" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="numero">Número:</label>
+                    <input type="text" asp-for="Numero" class="form-control" id="numero" name="numero">
+                    <span asp-validation-for="Numero" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="complemento">Complemento:</label>
+                    <input type="text" asp-for="Complemento" class="form-control" id="complemento" name="complemento">
+                    <span asp-validation-for="Complemento" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-5">
+                    <label for="bairro">Bairro:</label>
+                    <input type="text" asp-for="Bairro" class="form-control" id="bairro" name="bairro">
+                    <span asp-validation-for="Bairro" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-6">
+                    <label for="municipio">Município:</label>
+                    <input type="text" asp-for="Municipio" class="form-control" id="municipio" name="municipio">
+                    <span asp-validation-for="Municipio" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-1">
+                    <label for="uf">UF:</label>
+                    <input type="text" asp-for="UF" class="form-control" id="uf" name="uf">
+                    <span asp-validation-for="UF" class="text-danger"></span>
+                </div>
+            </div>
+
+            <div class="form-row">
+                <div class="form-group col-md-3">
+                    <label for="cep">CEP:</label>
+                    <input type="text" asp-for="CEP" class="form-control" id="cep" name="cep">
+                    <span asp-validation-for="CEP" class="text-danger"></span>
+                </div>
+                <div class="form-group col-md-2">
+                    <label for="data_cadastro">Data do Cadastro:</label>
+                    <input type="date" asp-for="Data_Cadastro" class="form-control" id="data_cadastro" name="data_cadastro">
+                    <span asp-validation-for="Data_Cadastro" class="text-danger"></span>
+                </div>
+            </div>          
+            <br>
+
+            <button type="submit" class="btn btn-primary btn-block">Cadastrar</button>
+            <a class="btn btn-secondary btn-block" asp-controller="Cliente" asp-action="Index" role="button">Voltar</a>
+        </form>
+
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+    </div>
+</body>
+</html>

@@ -1,0 +1,41 @@
+﻿@model ClienteModel
+
+@{
+    ViewData["Title"] = "Confirmação de exclusão de cliente";
+}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulário Cadastro</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+
+        body {
+            background-color: #f4f4f4;
+        }
+
+        .container {
+            background-color: #ffffff;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+            margin-top: 50px;
+        }
+
+    </style>
+</head>
+    <body>
+    
+        <div class="text-center">
+            <h3>Deseja realmente excluir o cliente (@Model.Nome)?</h3>
+        </div>
+        <br> 
+    
+        <a class="btn btn-primary btn-block" role="button" asp-controller="Cliente" asp-action="Index">Cancelar Exclusão</a>
+        <a class="btn btn-danger btn-block" role="button" asp-controller="Cliente" asp-route-id="@Model.Id" asp-action="Apagar">Confirmar Exclusão</a>
+
+    </body>
+</html>
