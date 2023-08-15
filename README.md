@@ -2,7 +2,7 @@
 
 Este é um projeto de sistema de cadastro de clientes com funcionalidades de inclusão, alteração, exclusão e pesquisa de informações. O sistema é baseado em um banco de dados chamado "Cadastros" com uma tabela chamada "clientes".
 
-## SGBD MySQL = ConnectionString "database":"server=localhost;database=cadastros;port=3306;uid=root;pwd=vasco"
+## SGBD MySQL = ConnectionString "database":"server=localhost;database=cadastros;port=3306;uid=root;pwd=R1e2n3a4n5!"
 ## Estrutura do Banco de Dados
 
 ### Base de dados: Cadastros
